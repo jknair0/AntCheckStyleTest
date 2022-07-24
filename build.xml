@@ -2,10 +2,14 @@
     <property name="src" location="src"/>
     <property name="build" location="build"/>
     <property name="dist" location="dist"/>
+    <property name="report" location="report"/>
+    <property name="checkstyle.report.file.xml" value="${report}/checkstyle_report.xml"/>
+    <property name="checkstyle.report.file.html" value="${report}/checkstyle_report.html"/>
 
     <target name="init">
         <tstamp/>
         <mkdir dir="${build}"/>
+        <mkdir dir="${report}"/>
     </target>
 
     <target name="compile" depends="init" description="compile the sources">
@@ -28,14 +32,20 @@
         <ivy:retrieve sync="true" type="jar"/>
     </target>
 
-    <target name="checkstyle" description="Runs checkstyle">
+    <target name="checkstyle" depends="init" description="Runs checkstyle">
         <taskdef
                 resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
                 classpath="${basedir}/manual-lib/checkstyle-8.45.1-all.jar"/>
         <checkstyle config="checkstyle.xml">
-            <fileset dir="." includes="**/*.java" />
-            <formatter tofile="xml" />
+            <fileset dir="src" includes="**/*.java"/>
+            <formatter type="xml" tofile="${checkstyle.report.file.xml}"/>
+            <formatter type="plain"/>
         </checkstyle>
+    </target>
+
+    <target name="checkstyle-html" depends="checkstyle" description="Create checkstyle report in html format">
+        <xslt in="${checkstyle.report.file.xml}" out="${checkstyle.report.file.html}"
+              style="${basedir}/checkstyle-noframes-sorted.xsl"/>
     </target>
 
 </project>
