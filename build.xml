@@ -5,6 +5,7 @@
     <property name="report" location="report"/>
     <property name="checkstyle.report.file.xml" value="${report}/checkstyle_report.xml"/>
     <property name="checkstyle.report.file.html" value="${report}/checkstyle_report.html"/>
+    <property name="checkstyle.report.file.sarif" value="${report}/checkstyle_report.sarif"/>
 
     <target name="init">
         <tstamp/>
@@ -35,11 +36,13 @@
     <target name="checkstyle" depends="init" description="Runs checkstyle">
         <taskdef
                 resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
-                classpath="${basedir}/manual-lib/checkstyle-8.45.1-all.jar"/>
+                classpath="${basedir}/manual-lib/checkstyle-10.4-SNAPSHOT-all.jar"/>
         <checkstyle config="checkstyle.xml">
             <fileset dir="src" includes="**/*.java"/>
             <formatter type="xml" tofile="${checkstyle.report.file.xml}"/>
             <formatter type="plain"/>
+            <formatter type="sarif" tofile="${checkstyle.report.file.sarif}"/>
+            <!-- this ^-->
         </checkstyle>
     </target>
 

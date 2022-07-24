@@ -1,0 +1,244 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "downloadUri": "https://github.com/checkstyle/checkstyle/releases/",
+          "fullName": "Checkstyle",
+          "informationUri": "https://checkstyle.org/",
+          "language": "en",
+          "name": "Checkstyle",
+          "organization": "Checkstyle",
+          "rules": [
+          ],
+          "semanticVersion": "10.4-SNAPSHOT",
+          "version": "10.4-SNAPSHOT"
+        }
+      },
+      "results": [
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/jknair/testTrash/opensoucetests/ant-tests/src/Main.java"
+                },
+                "region": {
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Missing a Javadoc comment."
+          },
+          "ruleId": "javadoc.missing"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/jknair/testTrash/opensoucetests/ant-tests/src/Main.java"
+                },
+                "region": {
+                  "startColumn": 5,
+                  "startLine": 3
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "'method def modifier' has incorrect indentation level 4, expected level should be 2."
+          },
+          "ruleId": "indentation.error"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/jknair/testTrash/opensoucetests/ant-tests/src/Main.java"
+                },
+                "region": {
+                  "startColumn": 5,
+                  "startLine": 3
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Missing a Javadoc comment."
+          },
+          "ruleId": "javadoc.missing"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/jknair/testTrash/opensoucetests/ant-tests/src/Main.java"
+                },
+                "region": {
+                  "startColumn": 9,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "'method def' child has incorrect indentation level 8, expected level should be 4."
+          },
+          "ruleId": "indentation.child.error"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/jknair/testTrash/opensoucetests/ant-tests/src/Main.java"
+                },
+                "region": {
+                  "startColumn": 9,
+                  "startLine": 5
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "'method def' child has incorrect indentation level 8, expected level should be 4."
+          },
+          "ruleId": "indentation.child.error"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/jknair/testTrash/opensoucetests/ant-tests/src/Main.java"
+                },
+                "region": {
+                  "startColumn": 9,
+                  "startLine": 6
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "'if' has incorrect indentation level 8, expected level should be 4."
+          },
+          "ruleId": "indentation.error"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/jknair/testTrash/opensoucetests/ant-tests/src/Main.java"
+                },
+                "region": {
+                  "startColumn": 9,
+                  "startLine": 6
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "'if' is not followed by whitespace."
+          },
+          "ruleId": "ws.notFollowed"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/jknair/testTrash/opensoucetests/ant-tests/src/Main.java"
+                },
+                "region": {
+                  "startColumn": 9,
+                  "startLine": 6
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "WhitespaceAround: 'if' is not followed by whitespace. Empty blocks may only be represented as {} when not part of a multi-block statement (4.1.3)"
+          },
+          "ruleId": "ws.notFollowed"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/jknair/testTrash/opensoucetests/ant-tests/src/Main.java"
+                },
+                "region": {
+                  "startColumn": 24,
+                  "startLine": 6
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Empty if block."
+          },
+          "ruleId": "block.empty"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/jknair/testTrash/opensoucetests/ant-tests/src/Main.java"
+                },
+                "region": {
+                  "startColumn": 9,
+                  "startLine": 8
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "'if rcurly' has incorrect indentation level 8, expected level should be 4."
+          },
+          "ruleId": "indentation.error"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/jknair/testTrash/opensoucetests/ant-tests/src/Main.java"
+                },
+                "region": {
+                  "startColumn": 5,
+                  "startLine": 9
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "'method def rcurly' has incorrect indentation level 4, expected level should be 2."
+          },
+          "ruleId": "indentation.error"
+        }
+      ]
+    }
+  ]
+}
